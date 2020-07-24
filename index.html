@@ -8,6 +8,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="index.css">
+  <script src="index.js"></script>
 </head>
 <body>
   <header class="container">
@@ -38,6 +39,7 @@
     <blockquote><p>"People who are depressed use work as a distraction from their depression. Without work, there is no distraction, and when there is no distraction, they suicide."</p>
     <footer>Someone</footer>
     </blockquote>
+    <h2>Use a bookmark page with a side nav bar with scrollspy for projects page in website</h2>
     <table class="table
     table-striped
     table-bordered
@@ -125,13 +127,16 @@
     <br>
     <section class="row">
       <div class="col-sm-6">
-        <div class="embed-responsive embed-responsive-16by9">
+        <div id="studenthack" class="embed-responsive embed-responsive-16by9">
           <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VxZFeeljchc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
       <div class="col-sm-6"></div>
     </section>
     <br>
+    <button type="button" onclick="hideVideo()">Hide Video</button>
+    <button type="button" onclick="showVideo()">Show Video</button>
+    <br><br>
     <form>
       <div class="form-group">
         <label for="name">First Name:</label>
