@@ -10,5 +10,19 @@
 }
 
 body {
+  background-color: grey;
+}
+
+.middle {
   background-color: lightblue;
+}
+
+.noBottomMarginNavbar {
+  margin-bottom: 0px;
+}
+
+main {
+  border-style: solid;
+  border-width: 20px 0px 0px 0px;
+  border-color: lightblue;
 }
