@@ -1,1 +1,1 @@
-# My-first-responsive-website
+# My-first-javascript-website
