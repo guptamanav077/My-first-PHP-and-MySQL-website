@@ -16,7 +16,7 @@
       <h1>My First Bootstrap Page<small> By Manav Gupta</small></h1>
     </div>
   </header>
-  <nav class="navbar navbar-inverse noBottomMarginNavbar" data-spy="affix" data-offset-top="250">
+  <nav class="navbar navbar-inverse noBottomMarginNavbar container" data-spy="affix" data-offset-top="250">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -83,7 +83,7 @@
         <h4 class="media-heading">Lorem Ipsum</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <!-- Trigger the modal with a button -->
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Click here!</button>
+        <button type="button" onclick="currentDate()" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Click here!</button>
 
         <!-- Modal -->
         <div id="myModal" class="modal fade" role="dialog">
@@ -96,7 +96,7 @@
                 <h4 class="modal-title">Modal Header</h4>
               </div>
               <div class="modal-body">
-                <p>Some text in the modal.</p>
+                <p id="date">Some text in the modal.</p>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
