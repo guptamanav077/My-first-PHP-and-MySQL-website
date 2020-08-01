@@ -1,3 +1,5 @@
+"use strict";
+
 function hideVideo() {
   document.getElementById("studenthack").style.display = "none";
 }
