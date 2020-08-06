@@ -41,10 +41,10 @@ function restorePic() {
   document.getElementById("facePicture").src = "face.jpg";
 }
 
-function checker(id) {
-  if (document.getElementById(id).value === "") {
-    document.getElementById(id).style.borderColor = "red";
-  } else {
-    document.getElementById(id).style.borderColor = "white";
-  }
-}
+// function checker(id) {
+//   if (document.getElementById(id).value === "") {
+//     document.getElementById(id).style.borderColor = "red";
+//   } else {
+//     document.getElementById(id).style.borderColor = "white";
+//   }
+// }
