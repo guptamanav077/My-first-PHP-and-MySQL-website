@@ -8,12 +8,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="index.css">
-  <script src="index.js"></script>
+  <script src="my_jquery_functions.js"></script>
 </head>
 <body>
-  <header class="container middle">
+  <header id="header" class="container middle">
     <div class="jumbotron">
       <h1>My First Bootstrap Page<small> By Manav Gupta</small></h1>
+      <h1>Next time, have one div for entire page that has container class, and then put things inside that div</h1>
     </div>
   </header>
   <nav class="navbar navbar-inverse noBottomMarginNavbar container" data-spy="affix" data-offset-top="250">
@@ -36,11 +37,55 @@
       </div>
     </div>
   </nav>
-  <main class="container middle">
+  <main class="container middle" id="main">
     <blockquote><p>"People who are depressed use work as a distraction from their depression. Without work, there is no distraction, and when there is no distraction, they suicide."</p>
     <footer>Someone</footer>
     </blockquote>
     <h2>Use a bookmark page with a side nav bar with scrollspy for projects page in website</h2>
+    <h1>could create a pretty cool web game using JavaScript and jQuery</h1>
+    <pre>Possible things to add in:
+      change background colour on click of mouse colour selected randomly from set of colours.
+      some sort of pop-up when page has loaded.
+      when mouse moves over element
+      when input field(forms) changes(field not filled and another field selected)
+      when form submitted
+      key pressed?
+      when someone leaves the page(onunload)
+      attach events to window object e.g. resizing window
+      better to do it through event listeners rather than in HTML as it helps seperate the JS from HTML.
+
+      Window methods:
+        window.open() - open a new window
+        window.close() - close the current window
+        window.moveTo() - move the current window
+        window.resizeTo() - resize the current window
+
+      Alert boxes:
+        Alert box, prompt box, confirm box
+
+      Timing:
+        Set a clock in the page that updates constantly(using setinterval)
+        Use setTimeout function(perhaps load something in after a few second after page has loaded)
+
+      Use cookies to store username and welcome next time user enter site.
+      Google Maps api
+      Youtube api?
+      Twitter API
+      Facebook API
+
+      //jQuery
+      Slow and fast hide/show Animations
+      function call after showing/hiding something
+      toggle() method
+      fadeTo() method(ghost out image(my photo) maybe?)
+      slideToggle() method to put custom speed on panels open/close
+      jQuery animations(other css attributes e.g. position, font-size)
+      Stopping animations
+      append and prepend elements, remove elements
+      adding/removing/toggling classes
+      manipulate element's CSS
+      Use jQuery to make a searchable table (of names and email address?)
+    </pre>
     <table class="table
     table-striped
     table-bordered
@@ -204,5 +249,8 @@
     </div>
     <br>
   </main>
+
+  <script src="index.js"></script>
+  
 </body>
 </html>

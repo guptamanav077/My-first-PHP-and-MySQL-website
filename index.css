@@ -16,7 +16,7 @@ body {
 }
 
 .middle {
-  background-color: lightblue;
+  background-color: green;
 }
 
 .noBottomMarginNavbar {
@@ -26,5 +26,5 @@ body {
 main {
   border-style: solid;
   border-width: 20px 0px 0px 0px;
-  border-color: lightblue;
+  border-color: green;
 }

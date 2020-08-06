@@ -1,5 +1,7 @@
 "use strict";
 
+document.getElementById("header").onclick = changeColour;
+
 function hideVideo() {
   document.getElementById("studenthack").style.display = "none";
 }
@@ -10,4 +12,20 @@ function showVideo() {
 
 function currentDate() {
   document.getElementById('date').innerHTML = new Date(Date.now());
+}
+
+function changeColour() {
+  let cars = ["green", "lightblue", "yellow"];
+  let randomNumber = getRndInteger(0,2);
+  let colorr = cars[randomNumber];
+  let myElements = document.getElementsByClassName("middle");
+  document.getElementById("main").style.borderColor = colorr;
+  let x;
+  for (x of myElements) {
+    x.style.backgroundColor = colorr;
+  }
+}
+
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
