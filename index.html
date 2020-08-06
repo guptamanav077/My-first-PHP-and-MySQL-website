@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="index.css">
   <script src="my_jquery_functions.js"></script>
 </head>
-<body>
+<body onload="setTimeout(popUp), 1000">
   <header id="header" class="container middle">
     <div class="jumbotron">
       <h1>My First Bootstrap Page<small> By Manav Gupta</small></h1>
@@ -150,6 +150,28 @@
 
           </div>
         </div>
+
+        <!-- Hidden Modal -->
+        <div id="hiddenModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">WELCOME!</h4>
+              </div>
+              <div class="modal-body">
+                <p id="date">Welcome to my Website!</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
         <button type="button" onclick="window.alert('This is alert box!');">Click here!</button>
         <h3>Add increase/decrease font size buttons for paragraph above</h3>
       </div>
@@ -251,6 +273,6 @@
   </main>
 
   <script src="index.js"></script>
-  
+
 </body>
 </html>
