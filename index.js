@@ -1,3 +1,4 @@
+// Add Defer attribute for this script in the html head??
 "use strict";
 
 document.getElementById("header").onclick = changeColour;
@@ -38,4 +39,12 @@ function changePic() {
 
 function restorePic() {
   document.getElementById("facePicture").src = "face.jpg";
+}
+
+function checker(id) {
+  if (document.getElementById(id).value === "") {
+    document.getElementById(id).style.borderColor = "red";
+  } else {
+    document.getElementById(id).style.borderColor = "white";
+  }
 }

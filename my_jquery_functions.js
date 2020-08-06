@@ -5,6 +5,14 @@ function popUp() {
 
 $(document).ready(function(){
 
-  // jQuery methods go here...
+
 
 });
+
+// $("input").blur(function(){
+//   if ($("#"+String(this.id)).val() === "") {
+//     $(this).css("border-color", "red");
+//   } else {
+//     $(this).css("border-color", "white");
+//   }
+// });
