@@ -1,6 +1,8 @@
 "use strict";
 
 document.getElementById("header").onclick = changeColour;
+document.getElementById("facePicture").addEventListener("mouseover", changePic);
+document.getElementById("facePicture").addEventListener("mouseout", restorePic);
 
 function hideVideo() {
   document.getElementById("studenthack").style.display = "none";
@@ -28,4 +30,12 @@ function changeColour() {
 
 function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
+function changePic() {
+  document.getElementById("facePicture").src = "troll.png";
+}
+
+function restorePic() {
+  document.getElementById("facePicture").src = "face.jpg";
 }
