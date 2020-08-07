@@ -28,3 +28,7 @@ main {
   border-width: 20px 0px 0px 0px;
   border-color: green;
 }
+
+#panel {
+  display: none;
+}

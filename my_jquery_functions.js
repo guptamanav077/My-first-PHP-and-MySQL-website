@@ -1,4 +1,6 @@
 //This file with contain the functions that need to be loaded before body as this file is in the head.
+//should perhaps create another JS file with non-jquery functions
+//which need to be executed before body(in head section)(like below cookie functions)
 
 function popUp() { //have to have it outside the document ready because this is needed to load with the body not wait till body finishes loading
   // document.getElementById("hiddenModal").modal = 'show';
@@ -69,6 +71,10 @@ $(document).ready(function(){
 
   $("#ghostOut").click(function () {
     $("#facePicture").fadeTo("slow", 0.4);
+  });
+
+  $("#flip").click(function () {
+    $("#panel").slideToggle("slow");
   });
 
 });
