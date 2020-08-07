@@ -19,3 +19,8 @@ $(document).ready(function(){
 //Have to have the body and elements loaded before they can be refered to.
 //But functions can be declared before elements declared,
 //statements(assigning event handlers) must be declared after the elements have been declared.
+
+//jQuery attachs the event handler and states the function of the event handler,
+//all in one go
+
+//Unliike javascript where you have to do the event handler and functions seperately
