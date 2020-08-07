@@ -1,6 +1,7 @@
 function popUp() { //have to have it outside the document ready because this is needed to load with the body not wait till body finishes loading
   // document.getElementById("hiddenModal").modal = 'show';
   $('#hiddenModal').modal('show');
+  startTime();
 }
 
 $(document).ready(function(){

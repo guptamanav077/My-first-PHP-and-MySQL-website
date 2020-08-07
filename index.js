@@ -4,6 +4,8 @@
 document.getElementById("header").onclick = changeColour;
 document.getElementById("facePicture").addEventListener("mouseover", changePic);
 document.getElementById("facePicture").addEventListener("mouseout", restorePic);
+// document.getElementById("body").addEventListener("load", startTime);
+// console.log(4);
 // document.getElementById("body").addEventListener("beforeunload", leaveAlert);
 
 function hideVideo() {
@@ -40,6 +42,23 @@ function changePic() {
 
 function restorePic() {
   document.getElementById("facePicture").src = "face.jpg";
+}
+
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
 }
 
 // function checker(id) {
