@@ -53,6 +53,15 @@ $(document).ready(function(){
     }
   });
 
+  $("#hide").click(function() {
+    $("#studenthack").hide("slow");
+    // document.getElementById("studenthack").style.display = "none";
+  });
+
+  $("#show").click(function() {
+    $("#studenthack").show("slow");
+    // document.getElementById("studenthack").style.display = "block";
+  });
 
 });
 
