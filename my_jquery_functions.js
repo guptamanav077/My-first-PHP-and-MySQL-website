@@ -63,6 +63,10 @@ $(document).ready(function(){
     // document.getElementById("studenthack").style.display = "block";
   });
 
+  $("#fade").click(function () {
+    $("#studenthack").fadeToggle("slow");
+  });
+
 });
 
 //Have to have the body and elements loaded before they can be refered to.
