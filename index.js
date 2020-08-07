@@ -5,12 +5,6 @@ document.getElementById("header").onclick = changeColour;
 document.getElementById("facePicture").addEventListener("mouseover", changePic);
 document.getElementById("facePicture").addEventListener("mouseout", restorePic);
 // document.getElementById("body").addEventListener("beforeunload", leaveAlert);
-// window.onbeforeunload = leaveAlert();
-window.onbeforeunload = function(){
-  console.log(5);
-  popUp();
-}
-// console.log(3);
 
 function hideVideo() {
   document.getElementById("studenthack").style.display = "none";
@@ -56,11 +50,11 @@ function restorePic() {
 //   }
 // }
 
-function leaveAlert() {
+// function leaveAlert() {
   // console.log(1);
   // window.alert("Thank you for visiting");
   // debugger;
   // setTimeout(console.log(10),5000);
   // console.log(1);
-  return "Thank you for visiting";
-}
+//   return "Thank you for visiting";
+// }
