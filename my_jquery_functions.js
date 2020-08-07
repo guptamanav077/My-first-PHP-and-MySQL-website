@@ -67,6 +67,10 @@ $(document).ready(function(){
     $("#studenthack").fadeToggle("slow");
   });
 
+  $("#ghostOut").click(function () {
+    $("#facePicture").fadeTo("slow", 0.4);
+  });
+
 });
 
 //Have to have the body and elements loaded before they can be refered to.
