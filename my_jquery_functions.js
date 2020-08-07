@@ -47,7 +47,7 @@ function checkCookie() {
 
 $(document).ready(function(){
 
-  $("input, textarea").blur(function(){
+  $(".form-control").blur(function(){
     if ($("#"+this.id).val() === "") {
       $(this).css("border-color", "red");
     } else {
@@ -79,6 +79,13 @@ $(document).ready(function(){
 
   $("#hugee").click(function () {
     $("#lorem").animate({fontSize: "24px"});
+  });
+
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
   });
 
 });
