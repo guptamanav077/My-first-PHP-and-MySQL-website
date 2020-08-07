@@ -77,6 +77,10 @@ $(document).ready(function(){
     $("#panel").slideToggle("slow");
   });
 
+  $("#hugee").click(function () {
+    $("#lorem").animate({fontSize: "24px"});
+  });
+
 });
 
 //Have to have the body and elements loaded before they can be refered to.
