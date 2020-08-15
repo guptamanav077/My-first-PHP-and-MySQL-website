@@ -95,7 +95,7 @@
 </head>
 <body>
   <div id="centerBackground" class="container middle">
-    <h1 id="thankYou">Thank you for submitting your query!</h1>
+    <h1 class="centerText">Thank you for submitting your query!</h1>
   </div>
 </body>
 </html>
