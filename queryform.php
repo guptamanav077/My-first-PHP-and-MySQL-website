@@ -28,9 +28,12 @@
   if ($_SERVER["REQUEST_METHOD"] == "GET") { //unnecessary if statement in my opinion, because this file only triggered when form submitted.
     if (empty($_GET["firstname"])) { //Perhaps unnecessary, but if this if statement triggered then that means hacker has bypassed your front end validation.
       header('HTTP/1.0 403 Forbidden'); //This doesnt redirect to proper error 403 page, SOMETHING TO FIGURE OUT FOR FUTURE!
-      die('You are not allowed to access this file.');
+      die('You are not allowed to access this file.'); //or perhaps we could display error messages on page instead.
     } else {
       $temp_firstname = test_input($_GET["firstname"]);
+      if (!preg_match("/^[a-zA-Z ]*$/",$temp_firstname)) {
+        $nameErr = "Only letters and white space allowed";
+      }
     }
 
     if (empty($_GET["lastname"])) {
@@ -38,6 +41,9 @@
       die('You are not allowed to access this file.');
     } else {
       $temp_lastname = test_input($_GET["lastname"]);
+      if (!preg_match("/^[a-zA-Z ]*$/",$temp_lastname)) {
+        $nameErr = "Only letters and white space allowed";
+      }
     }
 
     if (empty($_GET["email"])) {
@@ -45,6 +51,9 @@
       die('You are not allowed to access this file.');
     } else {
       $temp_email = test_input($_GET["email"]);
+      if (!filter_var($temp_email, FILTER_VALIDATE_EMAIL)) {
+        $emailErr = "Invalid email format";
+      }
     }
 
     if (empty($_GET["comment"])) {
