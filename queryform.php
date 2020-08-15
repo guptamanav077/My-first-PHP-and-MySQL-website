@@ -1,6 +1,18 @@
 <!-- Use session to store in a variable either "thank you for submitting" or error, and display that variable in the html. -->
 
-<?php
+<?php //declare(strict_types=1); // strict requirement
+
+  // ini_set('display_errors', 1);
+  // ini_set('display_startup_errors', 1);
+  // error_reporting(E_ALL);
+
+  function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+  }
+
   $servername = "localhost";
   $username = "root";
   $password = "password";
@@ -13,10 +25,10 @@
     die("Connection failed: " . $conn->connect_error);
   }
 
-  $temp_firstname = $_GET["firstname"];
-  $temp_lastname = $_GET["lastname"];
-  $temp_email = $_GET["email"];
-  $temp_issue = $_GET["comment"];
+  $temp_firstname = test_input($_GET["firstname"]);
+  $temp_lastname = test_input($_GET["lastname"]);
+  $temp_email = test_input($_GET["email"]);
+  $temp_issue = test_input($_GET["comment"]);
 
   $sql = "INSERT INTO queries (firstname, lastname, email, issue)
   VALUES ('$temp_firstname','$temp_lastname','$temp_email','$temp_issue')";
