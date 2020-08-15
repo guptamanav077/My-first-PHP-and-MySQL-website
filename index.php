@@ -26,26 +26,9 @@
       </h2>
     </div>
   </header>
-  <nav class="navbar navbar-inverse noBottomMarginNavbar container" data-spy="affix" data-offset-top="250">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav" id="navbar">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">Education</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Technical Strengths</a></li>
-          <li><a href="#">Work Experience and Achievements</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+
+  <?php include 'navbar.php';?>
+
   <main class="container middle" id="main">
     <blockquote><p>"People who are depressed use work as a distraction from their depression. Without work, there is no distraction, and when there is no distraction, they suicide."</p>
     <footer>Someone</footer>
@@ -322,9 +305,7 @@
     <br>
   </main>
 
-  <footer>
-    <p class="centerText">&copy; 2019-<?php echo date("Y");?></p>
-  </footer>
+  <?php include 'footer.php';?>
 
   <script src="index.js?v=<?php echo time(); ?>"></script>
 
