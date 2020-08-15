@@ -16,6 +16,14 @@
       <h1>My First Bootstrap Page<small> By Manav Gupta</small></h1>
       <h1>Next time, have one div for entire page that has container class, and then put things inside that div</h1>
       <h1 id="txt"></h1>
+      <h2>
+        <?php
+          $d1=strtotime("February 22");
+          $d2=ceil(($d1-time())/60/60/24);
+          $d3=ceil((time()-$d1)/60/60/24);
+          echo "There are " . $d2 . " or " . $d3 . " days until my birthday!";
+        ?>
+      </h2>
     </div>
   </header>
   <nav class="navbar navbar-inverse noBottomMarginNavbar container" data-spy="affix" data-offset-top="250">
@@ -198,7 +206,7 @@
                 <h4 class="modal-title">WELCOME!</h4>
               </div>
               <div class="modal-body">
-                <p id="date">Welcome to my Website!</p>
+                <p>Welcome to my Website!</p>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -313,12 +321,12 @@
     </div>
     <br>
   </main>
-  
+
   <footer>
     <p class="centerText">&copy; 2019-<?php echo date("Y");?></p>
   </footer>
 
-  <script src="index.js"></script>
+  <script src="index.js?v=<?php echo time(); ?>"></script>
 
 </body>
 </html>

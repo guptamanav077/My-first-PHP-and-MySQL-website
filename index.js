@@ -52,7 +52,7 @@ function startTime() {
   m = checkTime(m);
   s = checkTime(s);
   document.getElementById('txt').innerHTML =
-  h + ":" + m + ":" + s;
+  "Current time: " + h + ":" + m + ":" + s;
   var t = setTimeout(startTime, 500);
 }
 
