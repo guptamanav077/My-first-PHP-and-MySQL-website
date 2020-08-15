@@ -25,10 +25,35 @@
     die("Connection failed: " . $conn->connect_error);
   }
 
-  $temp_firstname = test_input($_GET["firstname"]);
-  $temp_lastname = test_input($_GET["lastname"]);
-  $temp_email = test_input($_GET["email"]);
-  $temp_issue = test_input($_GET["comment"]);
+  if ($_SERVER["REQUEST_METHOD"] == "GET") { //unnecessary if statement in my opinion, because this file only triggered when form submitted.
+    if (empty($_GET["firstname"])) { //Perhaps unnecessary, but if this if statement triggered then that means hacker has bypassed your front end validation.
+      header('HTTP/1.0 403 Forbidden'); //This doesnt redirect to proper error 403 page, SOMETHING TO FIGURE OUT FOR FUTURE!
+      die('You are not allowed to access this file.');
+    } else {
+      $temp_firstname = test_input($_GET["firstname"]);
+    }
+
+    if (empty($_GET["lastname"])) {
+      header('HTTP/1.0 403 Forbidden');
+      die('You are not allowed to access this file.');
+    } else {
+      $temp_lastname = test_input($_GET["lastname"]);
+    }
+
+    if (empty($_GET["email"])) {
+      header('HTTP/1.0 403 Forbidden');
+      die('You are not allowed to access this file.');
+    } else {
+      $temp_email = test_input($_GET["email"]);
+    }
+
+    if (empty($_GET["comment"])) {
+      header('HTTP/1.0 403 Forbidden');
+      die('You are not allowed to access this file.');
+    } else {
+      $temp_issue = test_input($_GET["comment"]);
+    }
+  }
 
   $sql = "INSERT INTO queries (firstname, lastname, email, issue)
   VALUES ('$temp_firstname','$temp_lastname','$temp_email','$temp_issue')";
