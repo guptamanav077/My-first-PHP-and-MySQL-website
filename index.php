@@ -274,12 +274,15 @@
 
     <h2><u>Files</u></h2>
     <p id="readText"></p>
-    <div class="form-group">
-      <textarea class="form-control" rows="10" name="fileText"></textarea>
-    </div>
     <button type="button" id="readFile" onclick="readFile()">Read File</button>
-    <button type="button">Overwrite</button>
-    <button type="button">Append</button>
+    <br><br>
+    <form action="file.php" method="get">
+      <div class="form-group">
+        <textarea class="form-control" rows="10" name="fileText"></textarea>
+      </div>
+      <button type="submit" name="overwrite">Overwrite</button>
+      <button type="submit" name="append">Append</button>
+    </form>
     <br>
 
     <br>
