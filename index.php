@@ -13,7 +13,12 @@
   function readFile() {
     document.getElementById("readText").innerHTML =
     `<?php
-     echo file_get_contents('file.txt');
+    $myfile = fopen("file.txt", "r") or die("Unable to open file!");
+    // Output one line until end-of-file
+    while(!feof($myfile)) {
+     echo fgets($myfile) . "<br>";
+    }
+    fclose($myfile);
     ?>`;
   }
   </script>
