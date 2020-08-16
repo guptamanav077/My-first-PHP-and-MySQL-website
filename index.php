@@ -51,6 +51,7 @@
     <pre>Possible things to add in:
 
       PHP:
+        EXPLORING SQL FURTHER WITH LOGIN SYSTEM(New repository?)
         Login Form, do all PHP on this page itself
         Forms!!!
         Add automatic copyright(check start of PHP Notes file)
@@ -75,9 +76,9 @@
         Insert Data
         Get last ID, insert multiple
         Prepared Statements
-        Select data from database
-        WHERE, ORDER BY
-        UPDATE, DELETE data
+        Select data from database(login system)
+        WHERE(login system), ORDER BY
+        UPDATE(login system), DELETE data (login system)
         LIMIT clause
 
       change background colour on click of mouse colour selected randomly from set of colours.
