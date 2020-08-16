@@ -25,6 +25,11 @@
     die("Connection failed: " . $conn->connect_error);
   }
 
+  // prepare and bind
+  $stmt = $conn->prepare("INSERT INTO queries (firstname, lastname, email, issue)
+  VALUES (?,?,?,?)");
+  $stmt->bind_param("ssss", $temp_firstname, $temp_lastname, $temp_email, $temp_issue);
+
   if ($_SERVER["REQUEST_METHOD"] == "GET") { //unnecessary if statement in my opinion, because this file only triggered when form submitted.
     if (empty($_GET["firstname"])) { //Perhaps unnecessary, but if this if statement triggered then that means hacker has bypassed your front end validation.
       header('HTTP/1.0 403 Forbidden'); //This doesnt redirect to proper error 403 page, SOMETHING TO FIGURE OUT FOR FUTURE!
@@ -68,10 +73,11 @@
     }
   }
 
-  $sql = "INSERT INTO queries (firstname, lastname, email, issue)
-  VALUES ('$temp_firstname','$temp_lastname','$temp_email','$temp_issue')";
+  // $sql = "INSERT INTO queries (firstname, lastname, email, issue)
+  // VALUES ('$temp_firstname','$temp_lastname','$temp_email','$temp_issue')";
+  // $conn->query($sql);
 
-  $conn->query($sql);
+  $stmt->execute();
 
   //Comment out above line ($conn->query($sql);) if want to uncomment below 5 lines.
 
@@ -81,6 +87,7 @@
   //   echo "Error: " . $sql . "<br>" . $conn->error;
   // }
 
+  $stmt->close();
   $conn->close();
 ?>
 

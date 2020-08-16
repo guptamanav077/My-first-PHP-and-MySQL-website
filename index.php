@@ -61,7 +61,7 @@
         File uploads
         Cookies!!!
         Sessions
-        Filtering (external) data
+        Filtering(validating) (external) data
         Filters(advanced)
         Callback functions?
         JSON?
