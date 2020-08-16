@@ -9,6 +9,14 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="index.css?v=<?php echo time(); ?>">
   <script src="my_jquery_functions.js"></script>
+  <script>
+  function readFile() {
+    document.getElementById("readText").innerHTML =
+    `<?php
+     echo file_get_contents('file.txt');
+    ?>`;
+  }
+  </script>
 </head>
 <body onload="setTimeout(popUp), 1000" id="body">
   <header id="header" class="container middle">
@@ -258,6 +266,16 @@
       </div>
       <button type="submit" class="btn btn-default">Submit</button>
     </form>
+
+    <h2><u>Files</u></h2>
+    <p id="readText"></p>
+    <div class="form-group">
+      <textarea class="form-control" rows="10" name="fileText"></textarea>
+    </div>
+    <button type="button" id="readFile" onclick="readFile()">Read File</button>
+    <button type="button">Overwrite</button>
+    <button type="button">Append</button>
+    <br>
 
     <br>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
