@@ -67,7 +67,7 @@
         JSON?
         Throw and catch exceptions
 
-        Login Form, do all PHP on this page itself
+        Login Form, do all PHP on this page itself, maybe cookies,sessions,display username is corner?
         //Database(to store information)
         Connect to database(and closing connections)
         Create a database

@@ -9,6 +9,7 @@
 
   if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $fileContent = test_input($_GET["fileText"]);
+    $fileContent = filter_var($fileContent, FILTER_SANITIZE_STRING);
   }
 
   if (isset($_GET['overwrite'])) {

@@ -1,5 +1,5 @@
 <!-- Use session to store in a variable either "thank you for submitting" or error, and display that variable in the html. -->
-
+<!-- test without session first -->
 <?php //declare(strict_types=1); // strict requirement
 
   // ini_set('display_errors', 1);
@@ -31,8 +31,9 @@
       die('You are not allowed to access this file.'); //or perhaps we could display error messages on page instead.
     } else {
       $temp_firstname = test_input($_GET["firstname"]);
+      $temp_firstname = filter_var($temp_firstname, FILTER_SANITIZE_STRING);
       if (!preg_match("/^[a-zA-Z ]*$/",$temp_firstname)) {
-        $nameErr = "Only letters and white space allowed";
+        die("Only letters and white space allowed in firstname");
       }
     }
 
@@ -41,8 +42,9 @@
       die('You are not allowed to access this file.');
     } else {
       $temp_lastname = test_input($_GET["lastname"]);
+      $temp_lastname = filter_var($temp_lastname, FILTER_SANITIZE_STRING);
       if (!preg_match("/^[a-zA-Z ]*$/",$temp_lastname)) {
-        $nameErr = "Only letters and white space allowed";
+        die("Only letters and white space allowed in lastname");
       }
     }
 
@@ -51,8 +53,9 @@
       die('You are not allowed to access this file.');
     } else {
       $temp_email = test_input($_GET["email"]);
+      $temp_email = filter_var($temp_email, FILTER_SANITIZE_EMAIL);
       if (!filter_var($temp_email, FILTER_VALIDATE_EMAIL)) {
-        $emailErr = "Invalid email format";
+        die("Invalid email format");
       }
     }
 
@@ -61,6 +64,7 @@
       die('You are not allowed to access this file.');
     } else {
       $temp_issue = test_input($_GET["comment"]);
+      $temp_issue = filter_var($temp_issue, FILTER_SANITIZE_STRING);
     }
   }
 
