@@ -33,7 +33,7 @@
         <?php
           $d1=strtotime("February 22");
           $d2=ceil(($d1-time())/60/60/24);
-          $d3=ceil((time()-$d1)/60/60/24);
+          $d3=ceil(($d1-time()+365*60*60*24)/60/60/24);
           echo "There are " . $d2 . " or " . $d3 . " days until my birthday!";
         ?>
       </h2>
@@ -51,6 +51,7 @@
     <pre>Possible things to add in:
 
       PHP:
+        Database system for storing products(inc price)? to try out other SQL commands.
         EXPLORING SQL FURTHER WITH LOGIN SYSTEM(New repository?)
         Login Form, do all PHP on this page itself
         Forms!!!
@@ -77,7 +78,7 @@
         Get last ID, insert multiple
         Prepared Statements
         Select data from database(login system)
-        WHERE(login system), ORDER BY
+        WHERE(login system), ORDER BY, LIKE, IN, BETWEEN, aliases, JOINS, FOREIGN KEY, INDEX, DATES, VIEW
         UPDATE(login system), DELETE data (login system)
         LIMIT clause
 
