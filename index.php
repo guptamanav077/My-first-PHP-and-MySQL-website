@@ -1,4 +1,4 @@
-<?php
+<?php //maybe add remove session variables command at start of every other page that could be assumed as logout, such as this one?
 
   session_start();//remember to set username as a session variable
 
