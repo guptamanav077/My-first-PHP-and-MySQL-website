@@ -1,5 +1,7 @@
 <?php
 
+  session_start();//remember to set username as a session variable
+
   function test_input($data) {
   $data = trim($data);
   $data = stripslashes($data);
