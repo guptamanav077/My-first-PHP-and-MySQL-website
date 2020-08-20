@@ -15,7 +15,9 @@
     <br><br><br><br>
     <h2 class="centerText"><u>Login:</u></h2>
     <br>
-    <form action="index.php" method="post" class="centerText">
+
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"
+      method="post" class="centerText">
       <div class="form-group">
         <label for="name">Username:</label>
         <input type="text" class="form-control" name="username" id="name" required>
@@ -26,12 +28,14 @@
       </div>
       <button type="submit" class="btn btn-default">Login</button>
     </form>
+
     <br>
     <p class="centerText">Don't have an account? Sign up:</p>
     <div class="centerText">
       <button type="button" class="btn btn-default"
       onclick="window.location.href = 'signup.php'">Sign Up</button>
     </div>
+
   </div>
 </body>
 </html>

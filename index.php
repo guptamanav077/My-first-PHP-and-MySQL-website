@@ -14,21 +14,47 @@
       die('You are not allowed to access this file.');
     } else {
       $username = test_input($_POST["username"]);
+      $username = filter_var($username, FILTER_SANITIZE_STRING);
+      $_SESSION["username"] = $username;
     }
     if (empty($_POST["password"])) {
       die('You are not allowed to access this file.');
     } else {
       $password = test_input($_POST["password"]);
+      $password = filter_var($password, FILTER_SANITIZE_STRING);
     }
     if (empty($_POST["email"])) {
       die('You are not allowed to access this file.');
     } else {
       $email = test_input($_POST["email"]);
+      $email = filter_var($email, FILTER_SANITIZE_EMAIL);
       if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         die("Invalid email format");
       }
     }
   }
+
+  $servername = "localhost";
+  $serverusername = "root";
+  $serverpassword = "password";
+  $dbname = "queries";
+
+  //Create connection
+  $conn = new mysqli($servername, $serverusername, $serverpassword, $dbname);
+  //Check connection
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  }
+
+  // prepare and bind
+  $stmt = $conn->prepare("INSERT INTO login (username, passwordd, email)
+  VALUES (?,?,?)");
+  $stmt->bind_param("sss", $username, $password, $email);
+
+  $stmt->execute();
+
+  $stmt->close();
+  $conn->close();
 
 ?>
 
