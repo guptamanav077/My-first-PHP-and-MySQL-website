@@ -13,7 +13,7 @@
         <li class="active"><a href="index.php">Home</a></li>
         <li><a href="education.php">Education</a></li>
         <li><a href="login.php">Projects</a></li>
-        <li><a href="#">Technical Strengths</a></li>
+        <li><a href="settings.php">Technical Strengths</a></li>
         <li><a href="#">Work Experience and Achievements</a></li>
       </ul>
     </div>
