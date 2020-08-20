@@ -15,6 +15,7 @@
     <br><br><br><br>
     <h2 class="centerText"><u>Signup:</u></h2>
     <br>
+
     <form action="index.php" method="post" class="centerText">
       <div class="form-group">
         <label for="name">Username:</label>
@@ -30,12 +31,14 @@
       </div>
       <button type="submit" class="btn btn-default">Signup</button>
     </form>
+
     <br>
     <p class="centerText">Already have an account? Login below:</p>
     <div class="centerText">
       <button type="button" class="btn btn-default"
       onclick="window.location.href = 'login.php'">Login</button>
     </div>
+
   </div>
 </body>
 </html>

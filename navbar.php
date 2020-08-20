@@ -11,8 +11,8 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav" id="navbar">
         <li class="active"><a href="#">Home</a></li>
-        <li><a href="login.php">Education</a></li>
-        <li><a href="#">Projects</a></li>
+        <li><a href="education.php">Education</a></li>
+        <li><a href="login.php">Projects</a></li>
         <li><a href="#">Technical Strengths</a></li>
         <li><a href="#">Work Experience and Achievements</a></li>
       </ul>

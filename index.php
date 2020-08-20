@@ -1,3 +1,35 @@
+<?php
+
+  function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+  }
+
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (empty($_POST["username"])) {
+      die('You are not allowed to access this file.');
+    } else {
+      $username = test_input($_POST["username"]);
+    }
+    if (empty($_POST["password"])) {
+      die('You are not allowed to access this file.');
+    } else {
+      $password = test_input($_POST["password"]);
+    }
+    if (empty($_POST["email"])) {
+      die('You are not allowed to access this file.');
+    } else {
+      $email = test_input($_POST["email"]);
+      if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        die("Invalid email format");
+      }
+    }
+  }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en-gb">
 <head>
